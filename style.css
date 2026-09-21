@@ -1,5 +1,101 @@
+
+:root {
+  --background: #000000;
+  --panel-color: #121212;
+  --main-font: 'Arial', sans-serif;
+  --text-color: white;
+  --muted: grey;
+}
 *{
     padding: 0;
     margin: 0;
+    color: var(--text-color);
+}
+* button{
+    background-color: var(--panel-color);
+}
+body {
+background-color: var(--background);
+display: flex;
+flex-direction: column;
+}
+.app-header{
+    width: calc(100vw - 55px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 15px;
+}
+.app-header button{
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--muted);
+    background: var(--panel-color);
+    cursor: pointer;
+    transition: 0.5s;
+    
+}
+.app-header button:hover{
+    background-color: var(--muted);
+}
+.app-body{
+    flex: 1;
+    display: flex;
+}
+.library {
+    background-color: var(--panel-color);
+    margin: 10px;
+    width: calc(30vw - 40px);
+    border-radius: 10px;
+    height: calc(100vh - 100px);
+    margin-left: 20px;
+}
+.now-playing{
+    background-color: var(--panel-color);
+    width: calc(70vw - 40px);
+    height: calc(100vh - 100px);
+    border-radius: 10px;
+    margin: 10px
+}
+
+.library-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.shuffle-btn{
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--muted);
+    background: var(--panel-color);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.shuffle-btn:hover{
+    background-color: var(--muted);
+}
+.now-playing-header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.volume-btn{
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid var(--muted);
+    background: var(--panel-color);
+    cursor: pointer;
+    transition: 0.5s;   
+}
+.volume-btn:hover{
+    background-color: var(--muted);
+}
+.song-thumbnail{
+    display: flex;
+    justify-content: center;
     
 }
