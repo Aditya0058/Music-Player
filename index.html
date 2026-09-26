@@ -1,51 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header class="app-header">
-        <h1>Music Player</h1>
-        <div class="header-actions">
-            <button> Add Songs </button>
-            <button> Open Folder </button>
-        </div>
-    </header>
-    <main class="app-body">
-        <section class="library">
-            <div class="library-header">
-                <h2>Library</h2>
-                <button class="shuffle-btn">Shuffle</button>
-            </div>
-            <table>
-                <thead>
-                    <tr><th>#</th><th>Name</th><th>Status</th></tr>
-                </thead>
-                <tbody>
-                    <tr><td>1</td><td>Dai Dai</td><td>Now Playing</td></tr>
-                </tbody>
-            </table>
-        </section>
-        <section class="now-playing">
-            <div class="now-playing-header">
-                <h2>Now Playing</h2>
-                <button class="volume-btn">Volume</button>
-            </div>
-            <div class="song-thumbnail">song-thumbnail</div>
-            <div class="controls">
-                <button class="previous">&laquo;</button>
-                <button class="play-pause-toggle">&#10074;&#10074;</button>
-                <button class="next">&raquo;</button>
-            </div>
-            <div class="progress">
-                <span>now</span>
-                <div class="progress-bar"><div class="progress-fill"></div></div>
-                <span>total</span>
-            </div>
-        </section>
-    </main>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>music-player</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
