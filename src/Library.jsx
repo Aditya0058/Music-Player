@@ -1,5 +1,5 @@
 import './Library.css'
-function Library({songs}) {
+function Library({songs, onSongSelect, currentSong}) {
   return (
         <div className="library-content">
             <div className="library-header">
@@ -13,7 +13,10 @@ function Library({songs}) {
             </div>
             <div className="song-list">
                 {songs.map((song, index) => (
-                    <div className="song-row" key={song.id}>
+                    <div 
+                    className={`song-row ${currentSong?.id === song.id ? 'active' : ''}`}
+                    key={song.id}
+                    onClick={() => {onSongSelect(song)}}>
                         <span>{index + 1}.</span>
                         <span>{song.title}</span>
                         <span>{song.date}</span>
