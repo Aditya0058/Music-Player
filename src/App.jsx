@@ -1,5 +1,4 @@
 import {useState} from 'react'
-import { useState } from 'react'
 import './App.css'
 import Header from './Header'
 import Library from './Library'
@@ -12,12 +11,21 @@ const dummySongs = [
 ];
 
 function App() {
+  const[currentSong, selectCurrentSong] = useState(dummySongs[0]);
+  function putThisSong(song){
+      selectCurrentSong(song);
+      console.log(song);
+  }
   return (
     <div className="main-container">
       <Header />
       <div className="content-layout">
-        <Library songs={dummySongs}/> 
-        <NowPlaying />
+        <Library 
+        songs={dummySongs}
+        onSongSelect = {putThisSong}
+        currentSong = {currentSong}
+        /> 
+        <NowPlaying currentSong={currentSong} />
       </div>
     </div>
   )
