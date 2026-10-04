@@ -51,3 +51,7 @@
     color: aliceblue;
     cursor: pointer;
 }
+.song-row.active {
+    background-color: rgba(255, 127, 127, 0.2);
+    border-radius: 5px;
+}
