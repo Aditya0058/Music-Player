@@ -1,5 +1,5 @@
 import './NowPlaying.css'
-function NowPlaying() {
+function NowPlaying({currentSong, togglePlayPause, isPlaying}) {
   return (
         <div className="nowplaying-content">
             <div className="nowplaying-header">
@@ -11,7 +11,11 @@ function NowPlaying() {
                 </div>
             </div>
             <div className="music-thumbnail">
+                <div>{currentSong.title}</div>
                 <img src="#" alt="tumbnail here" />
+            </div>
+            <div className="controls">
+                <button className="togle-play-pause" onClick={togglePlayPause}>{isPlaying ? "Pause" : "Play"}</button>
             </div>
             
         </div>
