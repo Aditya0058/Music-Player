@@ -32,6 +32,9 @@ function App() {
       selectCurrentSong(song);
       console.log(song);
   }
+  // function previousSong(song){
+  //   selectCurrentSong()
+  // }
   return (
     <div className="main-container">
       <audio src={currentSong?.audioSrc} ref={audioRef}></audio>

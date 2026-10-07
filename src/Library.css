@@ -1,7 +1,7 @@
 .library-content{
     display: flex;
-    width: calc(50vw - 20px);
-    height: calc(100vh - 76px);
+    width: calc(50% - 5px);
+    height: calc(100% - 76px);
     background-color: rgb(32, 32, 32);
     border: 2px solid #00aaff;
     border-radius: 20px;
@@ -10,7 +10,6 @@
     padding-left: 20px;
     padding-top: 16px;
     padding-right: 20px;
-    flex: 1;
     flex-direction: column;
     box-sizing: border-box;
 

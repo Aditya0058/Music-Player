@@ -11,11 +11,22 @@ function NowPlaying({currentSong, togglePlayPause, isPlaying}) {
                 </div>
             </div>
             <div className="music-thumbnail">
+                <img src="Thumbnail.png" alt="tumbnail here" />
                 <div>{currentSong.title}</div>
-                <img src="#" alt="tumbnail here" />
             </div>
             <div className="controls">
+                <button className="prev-song">Previous Song</button>
                 <button className="togle-play-pause" onClick={togglePlayPause}>{isPlaying ? "Pause" : "Play"}</button>
+                <button className="next-song">Next Song</button>
+            </div>
+            <div className="progress">
+                <div className="progress-bar-wrapper">
+                    <div className="progress-fill"></div>   
+                </div>
+                <div className="time-labels">
+                    <span>0:00</span>
+                    <span>3:02</span>
+                </div>
             </div>
             
         </div>

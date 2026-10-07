@@ -1,6 +1,6 @@
 .nowplaying-content{
-    width: calc(50vw - 20px);
-    height: calc(100vh - 76px);
+    width: calc(50% - 5px);
+    height: calc(100% - 76px);
     background-color: rgb(32, 32, 32);
     border: 2px solid #00aaff;
     border-radius: 20px;
@@ -9,7 +9,6 @@
     padding-left: 20px;
     padding-top: 16px;
     padding-right: 20px;
-    flex: 1;
     box-sizing: border-box;
 }
 .nowplaying-header{
@@ -53,6 +52,55 @@
 }
 .music-thumbnail {
     width: 100%;
-    height: 100%;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: aliceblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.music-thumbnail img{
+    max-width: 800px;
+    max-height: 400px;
+    object-fit: contain;
+}
+.music-thumbnail div {
+    font-family: cursive;
+    font-size: 40px;
+    padding-top: 18px;
+}
+.progress{
+    width: 100%;
+}
+.progress-bar-wrapper{
+    display: flex;
+    justify-self: center;
+    width: 90%;
+    height: 8px;
+    background-color: rgb(83, 83, 82);
+    border-radius: 20px;
+
+}
+.progress-fill{
+    justify-content:left;
+    border-radius: 20px;
+    width: 40%;
+    height: 8px;
+    background-color: yellow;
+}
+.time-labels{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.controls{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 20%;
+    gap: 40px;
     
 }
