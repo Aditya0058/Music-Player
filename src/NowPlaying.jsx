@@ -1,5 +1,5 @@
 import './NowPlaying.css'
-function NowPlaying({currentSong, togglePlayPause, isPlaying}) {
+function NowPlaying({currentSong, togglePlayPause, isPlaying, onNext, onPrevious}) {
   return (
         <div className="nowplaying-content">
             <div className="nowplaying-header">
@@ -15,9 +15,9 @@ function NowPlaying({currentSong, togglePlayPause, isPlaying}) {
                 <div>{currentSong.title}</div>
             </div>
             <div className="controls">
-                <button className="prev-song">Previous Song</button>
+                <button className="prev-song" onClick={onPrevious}>Previous Song</button>
                 <button className="togle-play-pause" onClick={togglePlayPause}>{isPlaying ? "Pause" : "Play"}</button>
-                <button className="next-song">Next Song</button>
+                <button className="next-song" onClick={onNext} >Next Song</button>
             </div>
             <div className="progress">
                 <div className="progress-bar-wrapper">
