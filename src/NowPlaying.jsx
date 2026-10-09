@@ -1,13 +1,13 @@
 import './NowPlaying.css'
-function NowPlaying({currentSong, togglePlayPause, isPlaying, onNext, onPrevious}) {
+function NowPlaying({currentSong, togglePlayPause, isPlaying, onNext, onPrevious, onInVol, onDeVol, defVol}) {
   return (
         <div className="nowplaying-content">
             <div className="nowplaying-header">
                 <div className='nowplaying-heading'>Now Playing</div>
                 <div className="vol-btns">
-                    <button className="vol-decrease">-</button>
-                    <button className="vol-default">Volume</button>
-                    <button className="vol-increase">+</button>
+                    <button className="vol-decrease" onClick={onDeVol}>-</button>
+                    <button className="vol-default" onClick={defVol}>Volume</button>
+                    <button className="vol-increase" onClick={onInVol}>+</button>
                 </div>
             </div>
             <div className="music-thumbnail">

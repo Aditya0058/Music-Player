@@ -16,6 +16,11 @@ function App() {
   const audioRef = useRef(null);
   const[currentSong, selectCurrentSong] = useState(dummySongs[0]);
   const[isPlaying, setIsPlaying] = useState(false);
+  const[volume, setVolume] = useState(0.5);
+
+  useEffect(() => {
+    audioRef.current.volume = volume;
+  }, [volume]);
   useEffect(() => {
     if(isPlaying===true){
       audioRef.current.play()
@@ -25,6 +30,15 @@ function App() {
       audioRef.current.pause();
     }
   }, [isPlaying]);
+  function increaseVolume(){
+    setVolume(prev => Math.min(prev + 0.1, 1))
+  }
+  function decreaseVolume(){
+    setVolume(prev => Math.min(prev - 0.1, 1))
+  }
+  function defaultVolume(){
+    setVolume(1);
+  }
   function togglePlayPause(){
     setIsPlaying(!isPlaying);
   };
@@ -71,6 +85,10 @@ function App() {
         isPlaying = {isPlaying}
         onNext = {handleNextSong}
         onPrevious = {handlePreviousSong}
+        onInVol = {increaseVolume}
+        onDeVol = {decreaseVolume}
+        defVol = {defaultVolume}
+
        />
       </div>
     </div>
