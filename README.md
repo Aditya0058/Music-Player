@@ -1,16 +1,21 @@
-# React + Vite
+# Music Player
+![Music player screenshot](image.png)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Features
+- *Add songs* --> put songs from ur system
+- *clear songs* ---> u can also delete the songs which were saved temporarily in ur system
+- *Volume Controls*  --> U can increase, decrease and set volume level as default.
+- *Music Controls* --> U can toggle, go to next, previous music
+- *Live Music play-bar* --> u can also see live song duration completed amongst the total duration and also you can drag that proress bar to skip particular part or jump to particular part of ur music
+- *Dark Ui* -> we have simple Dark UI
 
-Currently, two official plugins are available:
+## Tech Stack Used
+- react -> component based UI
+- CSS3 — Flexbox-based responsive layout
+- HTML5 Audio API — Native browser audio playback
+- Vercel — For deployment
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**To test out this projcet just head to** : https://music-player-tau-cyan.vercel.app/
 
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+_______________________
+This project was made for submitting in YSWS 
