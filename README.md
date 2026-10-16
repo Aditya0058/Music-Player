@@ -1,7 +1,19 @@
 # Music Player
 ![Music player screenshot](image.png)
 
-## Requirements 
+## How to use it / Requirements 
+- Head to music-player-tau-cyan.vercel.app/
+- Once on homepage - > you see that '+ Add Songs' button. Yes that one. Click it
+- Now you see that your file manager is poped up.
+- Go to folder where your music in .mp3 format are present. Once reached select songs
+- You can also select mutiple songs at  time by click once on particular song and then click on end of song list by holding shift key
+- Now click 'Open' / 'Add'
+- Hope you are seeing list of songs in left partition those you just selected.
+- Good, you are almost there.
+- Now click on the song that you have to play - You'll see the orage selector backgroud jumped on the song you clicked on, Yes thats the song is selected and it should be appearing on your right side partition of 'Now Playing'.
+- Just click on 'Play' button and you'll see that songs is coming out of your speakers.
+- Chill and enjoy your music with this music player. 
+- And you know? that once songs reaches its end the next song automatically gets triggered and starts to play without you manually clicking on the next song play button.
 - You need songs in format of .mp3 on your system to upload them in music player
 
 ## Features
@@ -33,7 +45,8 @@ If you want to tweak this music player so  your welcome
 -  Now u can see that this is react-vite based project written in javascript mostly. 
 here are some things that you need to know about this project's archeticture 
 1. there are some dummy songs for testing purpose in  /public
-2. all main functions lies in app.jsx only and none of the funciton is there in child routes I decided to do this as this is small project. And I have just transfered funcitons to required child routes
+2. all main functions lies in app.jsx only and none of the funciton is there in child routes I decided to do this as this is small project. And I have just transfered funcitons to required child routes.
+3. There are just 2 major components a) Library & b) NowPlaying. So it is not that much hard to figure out things.
 I hope you will love this project's codebase.
 Thank You 
 
