@@ -87,6 +87,13 @@ function App() {
     setIsPlaying(true);
   };
 
+  const currentTimeandNextSong = () => {
+      setCurrentTime(audioRef.current.currentTime);
+      if(currentTime >= duration-2){
+        handleNextSong();
+      }
+  }
+
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
@@ -104,7 +111,7 @@ function App() {
       <audio 
         src={currentSong?.audioSrc} 
         ref={audioRef}
-        onTimeUpdate={() => setCurrentTime(audioRef.current.currentTime)}
+        onTimeUpdate={currentTimeandNextSong}
         onLoadedMetadata={() => setDuration(audioRef.current.duration)}
       />
 
