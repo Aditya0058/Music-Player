@@ -97,49 +97,54 @@ function App() {
   const progressPercent = duration > 0 ? (currentTime / duration) * 100 : 0;
 
   return (
-    <div className="main-container">
-      {/* Hidden file input */}
-      <input 
-        type="file" 
-        accept="audio/*" 
-        multiple 
-        ref={fileInputRef} 
-        style={{ display: 'none' }} 
-        onChange={handleFileUpload} 
-      />
-      
-      <audio 
-        src={currentSong?.audioSrc} 
-        ref={audioRef}
-        onTimeUpdate={currentTimeandNextSong}
-        onLoadedMetadata={() => setDuration(audioRef.current.duration)}
-      />
-
-      <Header onAddSongs={() => fileInputRef.current.click()} />
-
-      <div className="content-layout">
-        <Library 
-          songs={songs}
-          onSongSelect={setCurrentSong}
-          currentSong={currentSong}
-          onClear={clearLibrary}
-        /> 
-        <NowPlaying 
-          currentSong={currentSong}
-          togglePlayPause={togglePlayPause}
-          isPlaying={isPlaying}
-          onNext={handleNextSong}
-          onPrevious={handlePreviousSong}
-          onInVol={increaseVolume}
-          onDeVol={decreaseVolume}
-          defVol={defaultVolume}
-          currentTime={currentTime}
-          duration={duration}
-          progressPercent={progressPercent}
-          onSeek={handleSeek}
+    <>
+      <div className="main-container">
+        {/* Hidden file input */}
+        <input 
+          type="file" 
+          accept="audio/*" 
+          multiple 
+          ref={fileInputRef} 
+          style={{ display: 'none' }} 
+          onChange={handleFileUpload} 
         />
+        
+        <audio 
+          src={currentSong?.audioSrc} 
+          ref={audioRef}
+          onTimeUpdate={currentTimeandNextSong}
+          onLoadedMetadata={() => setDuration(audioRef.current.duration)}
+        />
+
+        <Header onAddSongs={() => fileInputRef.current.click()} />
+
+        <div className="content-layout">
+          <Library 
+            songs={songs}
+            onSongSelect={setCurrentSong}
+            currentSong={currentSong}
+            onClear={clearLibrary}
+          /> 
+          <NowPlaying 
+            currentSong={currentSong}
+            togglePlayPause={togglePlayPause}
+            isPlaying={isPlaying}
+            onNext={handleNextSong}
+            onPrevious={handlePreviousSong}
+            onInVol={increaseVolume}
+            onDeVol={decreaseVolume}
+            defVol={defaultVolume}
+            currentTime={currentTime}
+            duration={duration}
+            progressPercent={progressPercent}
+            onSeek={handleSeek}
+          />
+        </div>
+        <div className="footer">
+          <h3>Made by Aditya Rajput - with no use of AI except for reading docss</h3>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

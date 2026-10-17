@@ -12,3 +12,8 @@
   width: 100%;
   flex: 1;
 }
+.footer{
+  color: rgb(132, 128, 128);
+  justify-self: center;
+  align-self: center;
+}
