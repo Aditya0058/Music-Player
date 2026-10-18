@@ -20,6 +20,7 @@
 - *Add songs* --> put songs from ur system
 - *clear songs* ---> u can also delete the songs which were saved temporarily in ur system
 - *Volume Controls*  --> U can increase, decrease and set volume level as default.
+- *Live Volume Percentage* --> You can see live percentage of current volume and see it syncing when u increase and decrease the volume.
 - *Music Controls* --> U can toggle, go to next, previous music
 - *Live Music play-bar* --> u can also see live song duration completed amongst the total duration and also you can drag that proress bar to skip particular part or jump to particular part of ur music
 - *Dark Ui* -> we have simple Dark UI
