@@ -24,8 +24,12 @@ function Library({ songs, onSongSelect, currentSong, onClear }) {
               key={song.id}
               onClick={() => onSongSelect(song)}
             >
-              <span>{index + 1}.</span>
-              <span>{song.title}</span>
+              <span>{index + 1}</span>
+              <span>
+                  {song.title 
+                    ? (song.title.length > 60 ? song.title.substring(0, 60) + "..." : song.title) 
+                    : "Unknown Title"}
+                </span>
               <span>{song.date}</span>
             </div>
           ))
