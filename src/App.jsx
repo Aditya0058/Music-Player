@@ -138,6 +138,7 @@ function App() {
             duration={duration}
             progressPercent={progressPercent}
             onSeek={handleSeek}
+            volume={volume}
           />
         </div>
         <div className="footer">

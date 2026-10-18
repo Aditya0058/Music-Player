@@ -1,6 +1,6 @@
 import './NowPlaying.css';
 
-function NowPlaying({ currentSong, togglePlayPause, isPlaying, onNext, onPrevious, onInVol, onDeVol, defVol, currentTime, duration, progressPercent, onSeek }) {
+function NowPlaying({ currentSong, togglePlayPause, isPlaying, onNext, onPrevious, onInVol, onDeVol, defVol, currentTime, duration, progressPercent, onSeek, volume}) {
     
     function formatTime(seconds) {
         if (isNaN(seconds) || seconds === undefined) return "0:00";
@@ -14,6 +14,7 @@ function NowPlaying({ currentSong, togglePlayPause, isPlaying, onNext, onPreviou
             <div className="nowplaying-header">
                 <div className='nowplaying-heading'>Now Playing</div>
                 <div className="vol-btns">
+                    <span className="vol-percent">{Math.round(volume * 100)}%</span>
                     <button className="vol-decrease" onClick={onDeVol}>-</button>
                     <button className="vol-default" onClick={defVol}>Volume</button>
                     <button className="vol-increase" onClick={onInVol}>+</button>
