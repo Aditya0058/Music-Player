@@ -70,6 +70,10 @@
     font-family: cursive;
     font-size: 40px;
     padding-top: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 80%;
+    text-overflow: ellipsis;
 }
 .progress{
     width: 100%;
@@ -100,7 +104,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    height: 20%;
+    height: 10%;
     gap: 40px;
     
 }

@@ -22,7 +22,12 @@ function NowPlaying({ currentSong, togglePlayPause, isPlaying, onNext, onPreviou
             
             <div className="music-thumbnail">
                 <img src="Thumbnail.png" alt="thumbnail here" />
-                <div>{currentSong ? currentSong.title : "No song selected"}</div>
+                <div>{currentSong 
+                        ? (currentSong.title.length > 30 
+                            ? currentSong.title.substring(0, 30) + "..." 
+                            : currentSong.title) 
+                        : "No song selected"}
+                </div>
             </div>
             
             <div className="controls">
