@@ -12,8 +12,11 @@
     padding-right: 20px;
     flex-direction: column;
     box-sizing: border-box;
+    scrollbar-color: #888888 transparent;
 
 }
+
+
 .library-header {
     display: flex;
 }
